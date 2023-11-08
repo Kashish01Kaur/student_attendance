@@ -1,0 +1,28 @@
+<div class="mark-attendance-container">
+<form [formGroup]="attendanceForm" (ngSubmit)="onSubmit($event)" #formGroupDirective="ngForm">
+  <mat-form-field appearance="fill" class="choose">
+    <mat-label>Choose student</mat-label>
+    <mat-select formControlName="selectedStudent" (selectionChange)="onSelect()">
+      <mat-option *ngFor="let student of students" [value]="student">{{ student.id }} - {{ student.name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Date</mat-label>
+    <input formControlName="date" matInput required>
+  </mat-form-field>
+<br>
+<div class="button">
+  <br>
+  
+  <div class="attendance-buttons">
+    <button type="button" [class.selected]="attendanceForm.get('status')?.value === 'Present'" (click)="setAttendance('Present')">Present</button>
+    <button type="button" [class.selected]="attendanceForm.get('status')?.value === 'Absent'" (click)="setAttendance('Absent')">Absent</button>
+  </div>
+<br>
+  <button mat-raised-button color="primary" type="submit" class="submit">Submit</button>
+</div>
+
+</form>
+</div>

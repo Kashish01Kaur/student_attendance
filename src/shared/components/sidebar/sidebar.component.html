@@ -1,0 +1,25 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" opened="true" class="side">
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="'/home'" routerLinkActive="active">Home</a>
+        <a mat-list-item [routerLink]="'/dashboard'" routerLinkActive="active">Dashboard</a>
+        <a mat-list-item [routerLink]="'/add-student'" routerLinkActive="active">Add Student</a>
+        <a mat-list-item [routerLink]="'/mark-attendance'" routerLinkActive="active">Mark Attendance</a>
+        <a mat-list-item [routerLink]="'/charts'" routerLinkActive="active">Charts</a>
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <mat-toolbar color="primary" class="head">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>Student Attendance Management System</span>
+      </mat-toolbar>
+      <div class="router-container">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+

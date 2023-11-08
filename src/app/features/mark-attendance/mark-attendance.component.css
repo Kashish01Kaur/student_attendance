@@ -1,0 +1,18 @@
+.mark-attendance-container {
+  height: 25vw;
+  margin: 10vw 30vw;
+}
+.mark-attendance-container mat-form-field {
+  width: 30vw;
+}
+.mark-attendance-container button {
+  margin-left: 7vw;
+}
+.mark-attendance-container attendance-buttons {
+  display: flex;
+  gap: 1vw;
+  margin-top: 2vw;
+}
+.mark-attendance-container .submit {
+  margin-left: 12vw;
+}/*# sourceMappingURL=mark-attendance.component.css.map */

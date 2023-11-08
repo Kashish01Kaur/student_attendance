@@ -1,0 +1,11 @@
+.add-student-container {
+  height: 25vw;
+  margin: 10vw 30vw;
+}
+.add-student-container mat-form-field {
+  width: 30vw;
+}
+.add-student-container button {
+  margin-top: 2vw;
+  margin-left: 12vw;
+}/*# sourceMappingURL=add-student.component.css.map */
